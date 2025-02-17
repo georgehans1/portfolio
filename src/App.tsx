@@ -37,11 +37,11 @@ const TechIcon = ({ path, title, color }: TechIconProps) => (
         whileHover={{ scale: 1.1 }}
         animate={{
           x: [-10, 10, -10],
-          rotate: [-5, 5, -5]
+          rotate: [-10, 10, -10]
         }}
         transition={{
           x: {
-            duration: 4,
+            duration: 2,
             repeat: Infinity,
             ease: "easeInOut"
           },
@@ -156,46 +156,54 @@ function App() {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 2.0 }}
                 className="text-center md:text-left"
                 style={{ scale }}
             >
               <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
+                  initial={{opacity: 0, y: 20}}
+                  animate={{opacity: 1, y: 0}}
+                  transition={{delay: 0.4}}
               >
-                <h2 className="text-xl mb-4">Hey, I'm Hans</h2>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  I build <span className="text-primary">seamless digital</span> experiences with clean, efficient code
-                </h1>
-                <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
-                  As a frontend developer evolving into fullstack, I bring designs to life with performance, scalability, and user experience in mind.                </p>
+                <h2 className="text-xl mb-4">Hi, I'm Hans</h2>
               </motion.div>
-              <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-              >
-                <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{delay: 0.7}}
                 >
-                  Get in Touch
-                  <motion.span
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.5 }}
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    I build <span className="text-primary">seamless digital</span> experiences with clean, efficient
+                    code
+                  </h1>
+                  <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
+                    As a frontend developer, I bring designs to life with performance, scalability, and user experience in
+                    mind. </p>
+                </motion.div>
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{delay: 0.8}}
+                >
+                  <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full hover:bg-primary/90 transition-colors"
                   >
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.span>
-                </a>
+                    Get in Touch
+                    <motion.span
+                        animate={{x: [0, 5, 0]}}
+                        transition={{repeat: Infinity, duration: 1.5}}
+                    >
+                      <ArrowRight className="w-5 h-5"/>
+                    </motion.span>
+                  </a>
+                </motion.div>
               </motion.div>
-            </motion.div>
 
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+              <motion.div
+                  initial={{opacity: 0, scale: 0.8}}
+                  animate={{opacity: 1, scale: 1}}
+                  transition={{duration: 0.8, delay: 0.8 }}
                 className="relative order-first md:order-last"
             >
               <div className="relative rounded-3xl overflow-hidden bg-secondary/50 p-4 md:p-8">
