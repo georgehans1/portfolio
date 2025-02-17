@@ -115,7 +115,7 @@ function App() {
   const companies = [
     {
       name: "Turntabl",
-      role: "Software Engineer III",
+      role: "Software Engineer",
       period: "2021 - Present",
       logo: "assets/turntabl.png",
     },
@@ -200,7 +200,7 @@ function App() {
             >
               <div className="relative rounded-3xl overflow-hidden bg-secondary/50 p-4 md:p-8">
                 <motion.img
-                    src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&q=80"
+                    src="assets/section.jpg"
                     alt="Profile"
                     className="w-full h-full rounded-2xl"
                     whileHover={{ scale: 1.05 }}
@@ -287,7 +287,7 @@ function App() {
                     <img
                         src={company.logo}
                         alt={company.name}
-                        className="w-28 h-20 mb-4 rounded-lg"
+                        className={`w-28 h-20 mb-4 rounded-lg ${company.name == "Turntabl" ? "turntabl-logo" : ""}`}
                     />
                     <h3 className="text-xl font-semibold mb-2">{company.name}</h3>
                     <p className="text-primary font-medium mb-1">{company.role}</p>
