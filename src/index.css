@@ -55,6 +55,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: black;
+
   }
 }
 
@@ -73,3 +75,32 @@
   50% { transform: scale(1.5); opacity: 0.4; }
   100% { transform: scale(1); opacity: 0.2; }
 }
+
+.gradient-heading {
+  background-size: 300% auto;
+  animation: gradient 8s linear infinite;
+}
+
+
+.bg-300 {
+  background-size: 300% auto;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-gradient {
+  animation: gradient 8s linear infinite;
+}
+
+
+.turntabl-logo{
+  width: 50%;
+  height: auto;
+  margin-bottom: 3rem;
+  filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(173deg) brightness(127%) contrast(90%);
+}
+
+
