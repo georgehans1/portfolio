@@ -394,19 +394,22 @@ function App() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
                 {
-                  title: "App Dashboard",
-                  image: "/api/placeholder/800/600",
-                  description: "Modern dashboard design"
+                  title: "Quiz App",
+                  image: "assets/quiz.png",
+                  description: "Play quizzes and top leaderboards",
+                  link: "https://hans-quizapp.web.app/"
                 },
                 {
-                  title: "E-commerce Platform",
-                  image: "/api/placeholder/800/600",
-                  description: "Full-featured online marketplace"
+                  title: "Quiz Management",
+                  image: "assets/quizadmin.png",
+                  description: "Quiz Management Portal",
+                   link: ""
                 },
                 {
                   title: "Portfolio Website",
-                  image: "/api/placeholder/800/600",
-                  description: "Personal portfolio showcase"
+                  image: "assets/portfolio.png",
+                  description: "Personal portfolio showcase",
+                   link: "https://georgehansportfolio.web.app/"
                 }
               ].map((project, index) => (
                   <motion.div
@@ -415,15 +418,15 @@ function App() {
                       whileHover={{ y: -5 }}
                       className="group bg-gray-50 rounded-xl overflow-hidden"
                   >
-                    {/*<div className="aspect-video overflow-hidden">*/}
-                    {/*  <motion.img*/}
-                    {/*      src={project.image}*/}
-                    {/*      alt={project.title}*/}
-                    {/*      className="w-full h-full object-cover"*/}
-                    {/*      whileHover={{ scale: 1.1 }}*/}
-                    {/*      transition={{ duration: 0.3 }}*/}
-                    {/*  />*/}
-                    {/*</div>*/}
+                    <div className="aspect-video overflow-hidden">
+                     <motion.img
+                       src={project.image}
+                        alt={project.title}
+                   className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                   transition={{ duration: 0.3 }}/>
+                   </div>
+                   <a href={project.link} target='_blank' className='cursor-pointer'>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                       <p className="text-muted-foreground mb-4">{project.description}</p>
@@ -436,6 +439,7 @@ function App() {
                       {/*  <ArrowRight className="w-4 h-4" />*/}
                       {/*</motion.a>*/}
                     </div>
+                    </a>
                   </motion.div>
               ))}
             </div>
@@ -473,7 +477,7 @@ function App() {
                   <span>Send Message</span>
                 </motion.a>
                 <motion.a
-                    href="assets/GeorgeHansonCV.pdf"
+                    href="assets/George_Hanson_CV_2025.pdf"
                     download="georgehanscv.pdf"
                     className="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary/10 transition-colors flex items-center justify-center gap-2"
                     whileHover={{ scale: 1.05 }}
